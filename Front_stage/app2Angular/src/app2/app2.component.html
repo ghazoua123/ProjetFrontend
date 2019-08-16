@@ -1,0 +1,42 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<div style="margin-top: 100px;">   
+</div>
+<br />
+<div>   
+</div>
+<br />
+
+
+<h1>User List</h1>
+<div class="col-md-3">
+    <div class="form-group">                 
+       <input class="form-control form-control-sm ml-3 w-75" type="text" name="" #myInput  [(ngModel)]="nom" (input)="Search()" placeholder="Recherche Nom" aria-label="Search">
+       </div>                                       
+   </div>
+<table class="table table-hover table-striped">
+                         <tr> 
+                            <th>Nom </th> 
+                            <th>Prenom</th> 
+                           <th>Email</th> 
+                            <th>Tel</th> 
+                            <th>Supprimer</th>
+                            <th>Modifier</th>
+
+                         </tr>
+                            <tr *ngFor="let row of tabUser">
+                        
+                                <td>{{row.nom}}</td>
+                                <td>{{row.prenom}}</td>
+                                <td>{{row.email}}</td>
+                                <td>{{row.tel}}</td>
+                                <td><button class="btn"  (click)="deleteUser(row.id)"> Supprimer</button></td>
+                                <td><button class="btn" (click)="updateUser(row.id)">Modifier</button></td>
+                            </tr>
+ </table>
+
+
+<app-comp1></app-comp1>
+
+                                
