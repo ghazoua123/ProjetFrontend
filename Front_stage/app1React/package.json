@@ -44,7 +44,7 @@
     "react-uikit-button": "^2.0.2",
     "reactstrap": "^8.0.1",
     "redux": "^4.0.0",
-    "resolve-url-loader": "^3.1.0",
+    "resolve-url-loader": "^5.0.0",
     "single-spa-react": "^2.6.0"
   }
 }
